@@ -79,4 +79,7 @@ textarea {
     .head-text {
         margin-top: 50px;
     }
+    .foot-text {
+        font-size: 15px;
+    }
 }
