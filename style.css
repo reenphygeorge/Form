@@ -1,0 +1,82 @@
+* {
+    font-family: "DM Sans", sans-serif;
+}
+
+body {
+    /* background-color: rgb(0, 74, 158); */
+    background: rgb(0, 73, 157);
+    background: radial-gradient(
+        circle,
+        rgba(0, 73, 157, 1) 0%,
+        rgba(0, 74, 158, 1) 15%,
+        rgba(0, 170, 255, 1) 100%
+    );
+    max-height: 100vh;
+}
+
+.card-name,
+.card-mail,
+.card-ph,
+.card-msg {
+    border: none;
+}
+
+input,
+textarea {
+    border-radius: 15px !important;
+    border-color: black !important;
+    height: 50px;
+}
+
+.card-main {
+    border: none !important;
+}
+
+.msg-label {
+    color: grey;
+}
+
+.btn-form {
+    height: 50px;
+    width: 200px;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: rgb(0, 128, 192);
+    margin-bottom: 20px;
+}
+
+.btn-form:hover {
+    background-color: rgb(0, 145, 218);
+}
+
+.btn-txt {
+    color: white;
+}
+
+.head-text,
+.foot-text {
+    color: white;
+}
+
+.head-text {
+    margin-top: 150px;
+}
+
+.foot-text {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main-card {
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 570px) {
+    .btn-form {
+        width: 130px;
+    }
+    .head-text {
+        margin-top: 90px;
+    }
+}
