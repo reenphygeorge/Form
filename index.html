@@ -25,7 +25,7 @@
     <div class="container">
         <h1 class="text-center head-text">Stay in Touch!</h1>
         <div class="row d-flex justify-content-center">
-            <div style="width: 35rem">
+            <div style="width: 32rem">
                 <div class="card mt-5 main-card">
                     <div class="card-body">
                         <form name="MyEventForm" onsubmit="return validate()">
@@ -34,10 +34,13 @@
                                     Name is mandatory
                                 </div>
                                 <div class="alert alert-danger d-none" id="email-alert" role="alert">
-                                    Email is mandatory
+                                    Enter a valid Email
                                 </div>
                                 <div class="alert alert-danger d-none" id="phone-alert" role="alert">
-                                    Phone is mandatory
+                                    Enter a valid Phone No.
+                                </div>
+                                <div class="alert alert-success d-none" id="success-alert" role="alert">
+                                    Success
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">
@@ -52,7 +55,7 @@
                             <div class="row d-flex justify-content-center">
                                 <div class="card card-mail" style="width: 30rem">
                                     <div class="card-body">
-                                        <input name="Email" type="email" class="form-control" placeholder="Email"
+                                        <input name="Email" type="text" class="form-control" placeholder="Email"
                                             aria-label="Name" aria-describedby="basic-addon1" />
                                     </div>
                                 </div>

@@ -3,6 +3,8 @@
 let name_alert = document.getElementById("name-alert");
 let email_alert = document.getElementById("email-alert");
 let phone_alert = document.getElementById("phone-alert");
+let success_alert = document.getElementById("success-alert");
+var flag = 0;
 
 function dispenamealert() {
     name_alert.classList.remove("d-none");
@@ -31,26 +33,45 @@ function dispphonealert() {
     }
 }
 
+function dispsuccessalert() {
+    success_alert.classList.remove("d-none");
+    setTimeout(successalertclose, 1000);
+
+    function successalertclose() {
+        success_alert.classList.add("d-none");
+    }
+}
+
 // Validation //
 function validate() {
     var name = document.forms["MyEventForm"]["Name"].value;
     var email = document.forms["MyEventForm"]["Email"].value;
     var phone = document.forms["MyEventForm"]["Phone"].value;
-
     if (name == "") {
         dispenamealert();
         return false;
     }
 
-    if (email == "") {
+    let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+    if (regex.test(email) == false) {
         dispemailalert();
         return false;
     }
-
-    if (phone == "") {
+    
+    regex = /^[\+]?([0-9]){10,15}$/;
+    if (!regex.test(phone)) {
         dispphonealert();
         return false;
     }
 
-    return true;
+    if(flag == 1) {
+        return true;
+    }
+    dispsuccessalert();
+    flag = 1;
+    setTimeout(returntrue, 1000);
+    function returntrue() {
+        document.MyEventForm.submit();
+    }
+    return false;
 }
