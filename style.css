@@ -83,3 +83,8 @@ textarea {
         font-size: 15px;
     }
 }
+
+.alert {
+    border-radius: 15px;
+    width: 30rem;
+}
