@@ -31,6 +31,7 @@ function dispphonealert() {
     }
 }
 
+// Validation //
 function validate() {
     var name = document.forms["MyEventForm"]["Name"].value;
     var email = document.forms["MyEventForm"]["Email"].value;
@@ -53,9 +54,3 @@ function validate() {
 
     return true;
 }
-
-// dispenamealert();
-// dispemailalert();
-// dispphonealert();
-
-// Validation //
