@@ -1,5 +1,4 @@
 // Alerts //
-
 let name_alert = document.getElementById("name-alert");
 let email_alert = document.getElementById("email-alert");
 let phone_alert = document.getElementById("phone-alert");
@@ -35,7 +34,7 @@ function dispphonealert() {
 
 function dispsuccessalert() {
     success_alert.classList.remove("d-none");
-    setTimeout(successalertclose, 1000);
+    setTimeout(successalertclose, 2000);
 
     function successalertclose() {
         success_alert.classList.add("d-none");
@@ -47,12 +46,13 @@ function validate() {
     var name = document.forms["MyEventForm"]["Name"].value;
     var email = document.forms["MyEventForm"]["Email"].value;
     var phone = document.forms["MyEventForm"]["Phone"].value;
-    if (name == "") {
+    let regex = /([a-zA-Z])$/;
+    if (regex.test(name) == false) { 
         dispenamealert();
         return false;
     }
 
-    let regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
+    regex = /^([_\-\.0-9a-zA-Z]+)@([_\-\.0-9a-zA-Z]+)\.([a-zA-Z]){2,7}$/;
     if (regex.test(email) == false) {
         dispemailalert();
         return false;
